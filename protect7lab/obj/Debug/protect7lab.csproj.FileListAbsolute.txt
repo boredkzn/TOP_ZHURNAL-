@@ -1,0 +1,15 @@
+C:\Users\79196\source\repos\protect7lab\protect7lab\bin\Debug\protect7lab.exe.config
+C:\Users\79196\source\repos\protect7lab\protect7lab\bin\Debug\protect7lab.exe
+C:\Users\79196\source\repos\protect7lab\protect7lab\bin\Debug\protect7lab.pdb
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.csprojAssemblyReference.cache
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.Form2.resources
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.Properties.Resources.resources
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.csproj.GenerateResource.cache
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.csproj.CoreCompileInputs.cache
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.exe
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.pdb
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.PredmetForm.resources
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.SvoistvaForm.resources
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.AdminPanel.resources
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.Reg.resources
+C:\Users\79196\source\repos\protect7lab\protect7lab\obj\Debug\protect7lab.PrepodForm.resources
