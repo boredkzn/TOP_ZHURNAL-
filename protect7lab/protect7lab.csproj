@@ -12,6 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +48,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D71011281CD070A2BE2FA75A85904AB226671E5E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>protect7lab_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -53,6 +82,13 @@
       <DependentUpon>AdminPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="DekanatAdmin.cs" />
+    <Compile Include="Forms\AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NameSubject.cs" />
     <Compile Include="PrepodForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,7 +109,6 @@
     </Compile>
     <Compile Include="group.cs" />
     <Compile Include="Konteiner.cs" />
-    <Compile Include="Ocenki.cs" />
     <Compile Include="Predmet.cs" />
     <Compile Include="PredmetForm.cs">
       <SubType>Form</SubType>
@@ -85,6 +120,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudForm.Designer.cs">
+      <DependentUpon>StudForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="subject.cs" />
     <Compile Include="SvoistvaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +136,9 @@
     <Compile Include="User.cs" />
     <EmbeddedResource Include="AdminPanel.resx">
       <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrepodForm.resx">
       <DependentUpon>PrepodForm.cs</DependentUpon>
@@ -116,6 +161,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudForm.resx">
+      <DependentUpon>StudForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SvoistvaForm.resx">
       <DependentUpon>SvoistvaForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,9 +176,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="protect7lab_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

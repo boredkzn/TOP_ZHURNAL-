@@ -53,14 +53,24 @@ namespace protect7lab
                 if (textBox1.Text == Konteiner.kontainPrepod[i].login && textBox2.Text == Konteiner.kontainPrepod[i].password)
                 {
                     PrepodForm prepodForm = new PrepodForm();
+                    prepodForm.prepod = Konteiner.kontainPrepod[i];
                     prepodForm.Show();
                     this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Error");
+                    return;
                 }
             }
+            for (int i = 0; i < Konteiner.kontainStud.Count; i++)
+            {
+                if(textBox1.Text == Konteiner.kontainStud[i].login && textBox2.Text == Konteiner.kontainStud[i].password)
+                {
+                    StudForm studForm = new StudForm();
+                    studForm.student = Konteiner.kontainStud[i];
+                    studForm.Show();
+                    this.Hide();
+                    return;
+                }
+            }
+            MessageBox.Show("Error");
         }
     }
 }

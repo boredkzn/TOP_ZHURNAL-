@@ -14,6 +14,10 @@ namespace protect7lab
         public string login { get; set; }
         public string password { get; set; }
 
+        public User()
+        {
+
+        }
         public User(int id, string name, string surname, string login, string password)
         {
             this.id = id;

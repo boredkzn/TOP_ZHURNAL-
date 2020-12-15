@@ -104,7 +104,7 @@
             this.logBox.Name = "logBox";
             this.logBox.Size = new System.Drawing.Size(474, 43);
             this.logBox.TabIndex = 5;
-            this.logBox.TextChanged += new System.EventHandler(this.logBox_TextChanged);
+            this.logBox.TextChanged += new System.EventHandler(this.LogBox_TextChanged);
             // 
             // passwordBox
             // 
@@ -168,7 +168,7 @@
             this.regButton.TabIndex = 11;
             this.regButton.Text = "Зарегистрироваться";
             this.regButton.UseVisualStyleBackColor = false;
-            this.regButton.Click += new System.EventHandler(this.regButton_Click);
+            this.regButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // backButton
             // 
@@ -182,7 +182,7 @@
             this.backButton.TabIndex = 12;
             this.backButton.Text = "Назад";
             this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.button2_Click);
+            this.backButton.Click += new System.EventHandler(this.Button2_Click);
             // 
             // teacherButton
             // 
@@ -196,7 +196,7 @@
             this.teacherButton.TabStop = true;
             this.teacherButton.Text = "Я учитель";
             this.teacherButton.UseVisualStyleBackColor = false;
-            this.teacherButton.CheckedChanged += new System.EventHandler(this.teacherButton_CheckedChanged);
+            this.teacherButton.CheckedChanged += new System.EventHandler(this.TeacherButton_CheckedChanged);
             // 
             // studentsButton
             // 

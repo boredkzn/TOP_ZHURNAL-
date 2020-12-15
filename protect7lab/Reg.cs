@@ -17,6 +17,7 @@ namespace protect7lab
         public int nomergroup = 0;
         public int telephonstud = 0;
         public string adressstud = "";
+        public Student student = new Student();
         
         public Form2 form;
         public Reg()
@@ -35,26 +36,34 @@ namespace protect7lab
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.form.Show();
 
         }
 
-        private void regButton_Click(object sender, EventArgs e)
+        private void RegStud()
+        {
+            student = new Student(rnd.Next(100000, 999999), nameBox.Text, surnameBox.Text, new Group(nomergroup), logBox.Text, passwordBox.Text);
+            student.subject.Add(new Subject(Konteiner.findNameSubject("ОАИП")));
+            Konteiner.kontainStud.Add(student);
+            Konteiner.findGroup(nomergroup).sostavGroup.Add(student);
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
         {
             if (teacherButton.Checked == true)
             {
                 label5.Text = "";
-                Konteiner.kontainPrepod.Add(new Prepod(rnd.Next(100000, 999999), nameBox.Text, surnameBox.Text, predmet, logBox.Text, passwordBox.Text));
+                Konteiner.kontainPrepod.Add(new Prepod(rnd.Next(100000, 999999), nameBox.Text, surnameBox.Text, Konteiner.FindSubject(predmet), logBox.Text, passwordBox.Text));
                 this.Hide();
                 this.form.Show();
             }
             else if (studentsButton.Checked == true)
             {
                 label5.Text = "";
-                Konteiner.kontainStud.Add(new Student(rnd.Next(100000, 999999), nameBox.Text, surnameBox.Text, nomergroup, adressstud, telephonstud, logBox.Text, passwordBox.Text));
+                this.RegStud();
                 this.Hide();
                 this.form.Show();
             }
@@ -65,7 +74,7 @@ namespace protect7lab
             }
         }
 
-        private void teacherButton_CheckedChanged(object sender, EventArgs e)
+        private void TeacherButton_CheckedChanged(object sender, EventArgs e)
         {
             if (teacherButton.Checked == true)
             {
@@ -76,7 +85,7 @@ namespace protect7lab
             }
         }
 
-        private void logBox_TextChanged(object sender, EventArgs e)
+        private void LogBox_TextChanged(object sender, EventArgs e)
         {
 
         }

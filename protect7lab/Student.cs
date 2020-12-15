@@ -8,15 +8,29 @@ namespace protect7lab
 {
     public class Student : User
     {
-        public int numGroup { get; set; }
-        public string adress { get; set; }
-        public int telephon { get; set; }
+        public Group numGroup { get; set; }
 
-        public Student(int id, string name, string surname, int numGroup, string adress, int telephon, string login, string password) : base(id, name, surname, login, password)
+        public List <Subject> subject;
+
+        public Student(int id, string name, string surname, Group numGroup, string login, string password) : base(id, name, surname, login, password)
         {
             this.numGroup = numGroup;
-            this.adress = adress;
-            this.telephon = telephon;
+            subject = new List<Subject>();
+        }
+        public Student() : base()
+        {
+
+        }
+        public Subject FindSubject(string Subject)
+        {
+            foreach (var item in subject)
+            {
+                if (item.NameSubject.nameSubject == Subject)
+                {
+                    return item;
+                }
+            }
+            return null;
         }
     }
 }
